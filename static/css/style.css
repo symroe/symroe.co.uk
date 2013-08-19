@@ -107,10 +107,6 @@ body > footer a {
     text-decoration:none;
 }
 
-@media and (max-device-width : 480px) {
-    body { text-rendering: optimizeSpeed; }
-}
-
 .narrow {
     max-width:540px;
     margin:0 auto;
@@ -141,4 +137,20 @@ blockquote:last-letter {
 
 blockquote:before {
     content: "\201C";
+}
+
+@media only screen and (max-width : 670px) {
+    body { text-rendering: optimizeSpeed; }
+    
+    .narrow {
+        margin:0 1em;
+    }
+    
+    blockquote {
+        width:auto;
+        position:relative;
+        left:-1%;
+        text-align:center;
+    }
+    
 }
