@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+{% for post in posts %}
+
+<article>
+    <header>
+    {% markdown %}
+# [{{ post.title }}]({{ post.path }})
+    {% endmarkdown %}
+    </header>
+    {% markdown %}
+{{ post.body }}
+    {% endmarkdown %}
+    <footer>
+    	<h5><time pubdate="pubdate">{{ date|date:"F j, Y" }}</time></h5>
+    </footer>
+</article>
+
+{% endfor %}
+
+{% endblock %}
+
+

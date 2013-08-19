@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="shortcut icon" href="{{ STATIC_URL }}/favicon.ico"> 
+    <link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css">
+
+    {% block header %}
+    <title>Welcome</title>
+    {% endblock %}
+
+</head>
+<body>
+    <nav>
+        <ul class=narrow>
+            <li>{% navlink "index.html" "Home" %}</li>
+        </ul>
+    </nav>
+    
+    <section id="content" class="narrow">
+        {% block content %}{% endblock %}
+    </section>
+    <footer>
+        <section class=narrow>
+            <ul>
+                <li><a href="https://twitter.com/symroe/">@symroe</a></li>
+                <li><a href="https://github.com/symroe">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/symroe">Linkedin</a></li>
+                <li><a href="https://plus.google.com/112051408212488050012?rel=author">Google<sup>+</sup></a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
+

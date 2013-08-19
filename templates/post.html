@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article>
+	<header>
+		<h1>{{ title }}</h1>
+	</header>
+		{% block body %}{% endblock %}
+	<footer>
+		<h5><time pubdate="pubdate">{{ date|date:"F j, Y" }}</time></h5>
+	</footer>
+</article>
+
+<nav>
+	<span class="prev">
+		{% if prevPost %}
+			<a href='{{ ROOT_URL }}/{{ prevPost.path }}' rel="prev">{{ prevPost.title }}</a>
+		{% endif %}
+	</span>
+
+	<span class="next">
+		{% if nextPost %}
+			<a href='{{ ROOT_URL }}/{{ nextPost.path }}' rel="next">{{ nextPost.title }}</a>
+		{% endif %}
+	</span>
+</nav>
+
+{% endblock %}
