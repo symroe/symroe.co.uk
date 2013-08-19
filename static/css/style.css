@@ -31,6 +31,15 @@ body > nav:after {
     clear:both;
 }
 
+body > footer:before,
+body > footer:after {
+    content:"";
+    display:table;
+}
+body > footer:after {
+    clear:both;
+}
+
 body > nav ul {
     list-style-type:none;
     margin:0;
@@ -152,5 +161,9 @@ blockquote:before {
         left:-1%;
         text-align:center;
     }
+    body > footer ul li {
+        clear:both;
+    }
+    
     
 }
