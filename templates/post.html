@@ -4,6 +4,7 @@
 <article>
 	<header>
 		<h1>{{ title }}</h1>
+        {% block page_head_extra %}{% endblock page_head_extra %}
 	</header>
 		{% block body %}{% endblock %}
 	<footer>

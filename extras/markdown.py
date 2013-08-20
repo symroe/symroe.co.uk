@@ -3,7 +3,6 @@ from django import template
 from django.utils.safestring import mark_safe
 from django.utils.encoding import force_unicode
 import markdown2
-from markdown_deux.conf import settings
 
 EXTRAS = [
     'header-ids',

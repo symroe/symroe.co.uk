@@ -1,0 +1,207 @@
+title: Minimum Viable Economy
+author: Sym Roe
+date: 20-08-2013
+
+{% extends "post.html" %}
+
+
+{% block body %}
+
+{% load markup %}
+{% filter markdown %}
+
+
+
+
+
+
+{% endfilter %}
+{% endblock %}
+
+{% block page_head_extra %}
+
+<div id="chart"></div>
+
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.v2.min.js"></script>
+<style type="text/css">
+    circle {
+      stroke: #999;
+      stroke-opacity: .5;
+    }
+    .link {
+      stroke: #999;
+    }
+</style>
+<script type="text/javascript">
+    //http://stackoverflow.com/a/901144/678708
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regexS = "[\\?&]" + name + "=([^&#]*)";
+      var regex = new RegExp(regexS);
+      var results = regex.exec(parent.window.location.href);
+      if(results == null)
+        return "";
+      else
+        return decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function lcfCodeToVerticesAndStepsArrayAndNumRepeats(lcfCode) {
+        lcfCode = lcfCode.replace(/ /g,"").replace(/−/g,"-")
+        var steps = lcfCode.match(/\[(.*?)\]/)[1]
+        if(steps=="") {
+            steps = []
+        }else{
+            steps = steps.split(',').filter(Number)
+        }
+        var numRepeats = parseInt(lcfCode.split(']')[1]) || 0
+        return [steps.length * (numRepeats || 1), steps, numRepeats]
+    }
+
+    function getLcfChords(numVertices, stepsArray, numRepeats){
+        var numSteps = stepsArray.length;
+        if(numRepeats < 0) throw "Repeats must be positive"
+        if(numSteps < 1) throw "Must have at least one step"
+
+        var numChords = numSteps*numRepeats,
+            chords = [];
+
+        for(var chord=1; chord<=numChords; chord++){
+            chords.push({source: chord % numVertices, target: (numVertices+chord+stepsArray[chord % numSteps]) % numVertices});
+        }
+
+        return chords;
+    }
+
+    var w = 640,
+        h = 500,
+        rcx = w/2,
+        rcy = h/2,
+        radius = 245,
+        numVertices = 0,
+        colors = d3.scale.category10().range(),
+        //the node with index 0 is fixed to the center and has a high charge
+        nodes = [],
+        links = [],
+        lcfStepsAndRepeats = [],
+        stepsArray = [],
+        lcfChords,
+        animationSpeed = 0,
+        interval = null,
+        lockVertices = false,
+        speed = 50,
+        lcfCode =  "[47, -23, -31, 39, 25, -21, -31, -41, 25, 15, 29, -41, -19, 15, -49, 33, 39, -35, -21, 17, -33, 49, 41, 31, -15, -29, 41, 31, -15, -25, 21, 31, -51, -25, 23, 9, -17, 51, 35, -29, 21, -51, -39, 33, -9, -51, 51, -47, -33, 19, 51, -21, 29, 21, -31, -39]2";
+
+    function draw(numVertices, stepsArray, numRepeats){
+        clearInterval(interval)
+        lcfChords = getLcfChords(numVertices, stepsArray, numRepeats)
+        links = []
+        nodes = [{fixed: true, x: w/2, y:h/2}].concat(d3.range(numVertices).map(function(d, i) { return {x:rcx+radius*Math.cos((i*2*Math.PI/numVertices) - Math.PI/2), y:rcy+radius*Math.sin((i*2*Math.PI/numVertices) - Math.PI/2)}; }))
+
+        nodes.slice(1).forEach(function(target, i) {
+            var node = nodes[i == nodes.length - 2 ? 1 : i+2],
+                x = target.x - node.x,
+                y = target.y - node.y;
+            links.push({source: node, target: target, linkDistance:0});
+        });
+
+        var currentVertex = 0
+        var currentVertexOffset = 0
+        function animateLcf() {
+            var stepInstruction = stepsArray[currentVertex % stepsArray.length]
+            var currentStep = (currentVertex + currentVertexOffset) - numVertices * Math.floor((currentVertex + currentVertexOffset) / numVertices)
+            if(currentVertexOffset == 0){
+                svg.selectAll("circle").filter(function(d,i){return currentVertex == currentStep}).style("fill", colors[1])
+                svg.selectAll("circle").filter(function(d,i){return currentVertex > i}).style("fill",colors[0])
+                svg.selectAll("circle").filter(function(d,i){return currentVertex < i}).style("fill","white")
+                currentVertexOffset += (stepInstruction > 0 ? 1 : -1);
+            }else if(currentVertexOffset != stepInstruction){
+                svg.selectAll("circle").filter(function(d,i){return currentStep == i}).style("fill",colors[1])
+                currentVertexOffset += (stepInstruction > 0 ? 1 : -1)
+            }else{
+                svg.selectAll("circle").filter(function(d,i){return currentStep == i}).style("fill",colors[1])
+                links.push({source: nodes.slice(1)[currentVertex], target: nodes.slice(1)[currentStep]});
+                drawLines()
+                currentVertex++
+                currentVertexOffset = 0;
+            }
+            if(currentVertex != numVertices){
+                interval = setTimeout(animateLcf, speed)
+            } else {
+                interval = null
+                svg.selectAll("circle").style("fill",colors[0])
+            }
+
+            if(!lockVertices) {
+                force.links(links)
+                force.start()
+            }
+        }
+
+        force.nodes(nodes)
+        force.start()
+        drawLines()
+        drawCircles()
+        interval = setTimeout(animateLcf, speed)
+    }
+
+    function getValuesAndDraw(){
+        lcfStepsAndRepeats = lcfCodeToVerticesAndStepsArrayAndNumRepeats(lcfCode)
+        draw(lcfStepsAndRepeats[0], lcfStepsAndRepeats[1], lcfStepsAndRepeats[2])
+    }
+
+    var w = $("#chart").parent().width();
+    var force = d3.layout.force()
+        .charge(function(d, i) { return lockVertices ? (i ? -1 : -6000) : (i ? -100 : 0) })
+        .size([w, h]);
+
+
+    var svg = d3.select("#chart").append("svg:svg")
+        .attr("width", w)
+        .attr("height", h);
+
+
+
+    getValuesAndDraw();
+
+    function drawCircles() {
+        circles = svg.selectAll("circle")
+            .data(nodes.slice(1))
+        circles.enter()
+            .append("svg:circle")
+            .attr("r", 5)
+            .style("fill", "white")
+            .text(function(d, i){return i})
+            .call(force.drag);
+        circles.exit().remove();
+    }
+    function drawLines(){
+        lines = svg.selectAll("line.link")
+            .data(links)
+        lines.enter().insert("svg:line", "circle.node")
+            .attr("class", "link")
+            .attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; })
+            .attr("drawn", 1);
+        lines.exit().remove()
+    }
+
+    force.on("tick", function(e) {
+        svg.selectAll("circle")
+           .attr("cx", function(d) { return d.x; })
+           .attr("cy", function(d) { return d.y; });
+
+        svg.selectAll("line.link")
+           .attr("x1", function(d) { return d.source.x; })
+           .attr("y1", function(d) { return d.source.y; })
+           .attr("x2", function(d) { return d.target.x; })
+           .attr("y2", function(d) { return d.target.y; });
+    });
+</script>
+
+{% endblock page_head_extra %}
+
