@@ -13,7 +13,7 @@
     {% endblock %}
 
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
     <nav>
         <ul class=narrow>
             <li>{% navlink "index.html" "Home" %}</li>

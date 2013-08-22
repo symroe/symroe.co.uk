@@ -1,0 +1,6 @@
+# Commenting
+
+If you would like to comment on any blog post, please submit a pull request.
+
+Please make your commend below the post, using properly formatted HTML, making 
+it clear who you are by providing links to twitter / etc.

@@ -3,6 +3,7 @@ from django import template
 from django.utils.safestring import mark_safe
 from django.utils.encoding import force_unicode
 import markdown2
+from typogrify.filters import typogrify
 
 EXTRAS = [
     'header-ids',
@@ -26,7 +27,9 @@ class MarkdownNode(template.Node):
     def render(self, context):
         value = self.nodelist.render(context)
         try:
-            return mark_safe(markdown2.markdown(value, extras=EXTRAS))
+            content =  mark_safe(markdown2.markdown(value, extras=EXTRAS))
+            content = typogrify(content)
+            return content
         except ImportError:
             if settings.DEBUG:
                 raise template.TemplateSyntaxError("Error in `markdown` tag: "

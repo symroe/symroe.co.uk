@@ -1,5 +1,6 @@
 def preBuild(site):
-
+    import sys
+    sys.path.append('.')
     from django.template.loader import add_to_builtins
     add_to_builtins('extras.templatetags')
     add_to_builtins('extras.markdown')

@@ -4,7 +4,7 @@ body {
     margin:0;
     passing:0;
     font-family:"auticons", Georgia, serif;
-    font-size:16px;
+    font-size:18px;
     line-height: 1.5;
     text-align: justify;
     text-justify: newspaper;
@@ -70,6 +70,15 @@ h1 {
     font-size:2.5em;
 }
 
+.index h1 {
+    font-size:2.5em;
+    margin:0;
+}
+
+.index article {
+    border-bottom:1px solid #AAA;
+}
+
 h1 a {
     text-decoration:none;
     color:#000;
@@ -119,6 +128,12 @@ body > footer a {
 .narrow {
     max-width:540px;
     margin:0 auto;
+}
+
+.standfirst {
+    font-style:italic;
+    margin:0;
+    padding:0;
 }
 
 blockquote {

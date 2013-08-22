@@ -50,6 +50,7 @@ def preBuild(site):
 			postContext['title'] = find('title')
 			postContext['author'] = find('author')
 			postContext['date'] = find('date')
+			postContext['standfirst'] = find('standfirst')
 			postContext['path'] = page.path
 			print page.path
 			postContext['body'] = getNode(get_template(page.path), name="body")

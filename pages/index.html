@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block body_class %}index{% endblock %}
 {% block content %}
 {% for post in posts %}
 
@@ -8,9 +9,7 @@
 # [{{ post.title }}]({{ post.path }})
     {% endmarkdown %}
     </header>
-    {% markdown %}
-{{ post.body }}
-    {% endmarkdown %}
+<div class="standfirst">{{ post.standfirst }}</div>
     <footer>
     	<h5><time pubdate="pubdate">{{ date|date:"F j, Y" }}</time></h5>
     </footer>
