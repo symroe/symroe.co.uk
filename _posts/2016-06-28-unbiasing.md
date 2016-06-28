@@ -4,7 +4,7 @@ layout: post
 tags: [unbiasing]
 ---
 
-{% newthought 'I was invited to speak' %} at [an event at nwspk house](https://www.facebook.com/events/1001444476668731/) the other day about the London Civic Tech community's reaction to the 'Brexit' result.
+{% newthought 'I was invited to speak' %} at [an event at Newspeak House](https://www.facebook.com/events/1001444476668731/) the other day about the London Civic Tech community's reaction to the 'Brexit' result.
 
 I wanted to talk about something that I've been mulling over for a while now called 'unbiasing':
 <!--more-->
