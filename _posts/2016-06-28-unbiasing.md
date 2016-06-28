@@ -14,7 +14,7 @@ This was partly promoted by this (intentionally provocative, I expect) paragraph
 
 > Calling angry technologists. We think we know something other people don’t. Let’s do a bit of a post-mortem of the referendum, and talk about how we might be able to apply our skills to make politics better so we can start feeling proud of our country again.
 
-I wanted to challenge the attitude that "We think we know something other people don’t" or that "our sills" automatically give us the ability to "make politics better".
+I wanted to challenge the attitude that "We think we know something other people don’t" or that "our skills" automatically give us the ability to "make politics better".
 
 The ability to write code doesn't enable you to "fix" society, it enables you to write code.
 
