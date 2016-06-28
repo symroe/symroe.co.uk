@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
-<h1>{{ page.title | capitalize }}</h1>
-<p>{{ page.date | date: "%B %-d, %Y" }}</p>
+<article>
 
+  <h1>{{ page.title | capitalize }}</h1>
+  <p>{{ page.date | date: "%B %-d, %Y" }}</p>
 
-{{ content }}
+  {{ content }}
+
+</article>

@@ -1,9 +1,25 @@
 ---
 layout: default
 ---
-<h1>{{ page.title | capitalize }}</h1>
-<p>{{ page.date | date: "%B %-d, %Y" }}</p>
+<article>
+
+  <h1>{{ page.title | capitalize }}</h1>
+  <p>{{ page.date | date: "%B %-d, %Y" }}</p>
 
 
-{{ content }}
-
+  {{ content }}
+  <footer markdown=1>
+    <a href="https://twitter.com/symroe">@symroe</a>
+  {% comment %}
+  Not enough tags to make this worthwhile
+    {% if page.tags %}
+    Tags:
+    <ul class="page_tags">
+      {% for tag in page.tags %}
+      <li><a href="/articles/tag/{{ tag }}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  {% endcomment %}
+  </footer>
+</article>

@@ -5,9 +5,11 @@ name: symroe.co.uk
 markdown: Kramdown
 kramdown:
   input: GFM
+  auto_ids: true
+  parse_block_html: true
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 highlighter: pygments
-permalink: /articles/:short_year/:title
+permalink: /articles/:year/:title
 timezone: Europe/London
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
@@ -25,3 +27,15 @@ transfer:
   settings: -av
   source: _site/
   destination: ~/Git/clayh53.github.com/
+gems:
+  - jekyll-archives
+jekyll-archives:
+  enabled:
+    - year
+    - tags
+  layouts:
+    year: year-archive
+    tag: tag-archive
+  permalinks:
+    year: '/articles/:year/'
+    tag: '/articles/tag/:name/'
