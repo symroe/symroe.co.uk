@@ -7,6 +7,7 @@ tags: [unbiasing]
 {% newthought 'I was invited to speak' %} at [an event at nwspk house](https://www.facebook.com/events/1001444476668731/) the other day about the London Civic Tech community's reaction to the 'Brexit' result.
 
 I wanted to talk about something that I've been mulling over for a while now called 'unbiasing':
+<!--more-->
 
 > Making the unconscious conscious will help you make more objective decisions, facilitate inclusive interactions, and create opportunities. Begin unbiasing with education, accountability, measurement, and more. <cite>[withgoogle.com](https://rework.withgoogle.com/subjects/unbiasing/)</cite>
 
