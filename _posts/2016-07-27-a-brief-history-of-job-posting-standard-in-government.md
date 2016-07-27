@@ -28,3 +28,5 @@ Then we suggested the UK Government adopt a [well known standard for job adverts
 Outside of Government, [Doteveryone have created a tool for checking the quality of job adverts](http://better-job-adverts.herokuapp.com/), including the use of scheme.org jobPosting, gendered wording, hours, location and readability.
 
 Anyone wanting to improve job adverts that they publish could start by running their adverts through this checker to see if there are common problems with them.
+
+[Richard has also written a list of ideas](http://blog.memespring.co.uk/2016/05/22/policy-options-for-getting-wider-adoption-of-jobposting-standard/) for getting wider adoption of jobPosting.
