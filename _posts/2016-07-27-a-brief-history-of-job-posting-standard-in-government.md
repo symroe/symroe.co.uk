@@ -19,6 +19,8 @@ For example, if the location of a job is something that can be put on Google Map
 
 Machine readable job adverts make generating reports on the labour market easier as well, allowing government and business to cater for the changing supply and demand of skills and workers.
 
+[Charles RT wrote a nice post explaining this in full](https://medium.com/@charlesrt/setting-an-open-standard-for-job-postings-9e548f8fc9bd#.ng6auvufw)
+
 When I was at DWP we came up with two ways of exploring this space.
 
 We started by [Create prototype tools that pretend high quality job data exists](https://digitaldwp.blog.gov.uk/2016/02/19/learning-through-prototyping-tools-for-universal-credit-claimants/), in order to test their usefulness with jobseekers. We learnt a lot about how job advert and labour market data could be improved by doing this.
