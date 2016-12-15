@@ -12,7 +12,7 @@ highlighter: pygments
 permalink: /articles/:year/:title
 timezone: Europe/London
 excerpt_separator: <!--more-->  # you can specify your own separator, of course.
-exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md', 'vendor']
 post:
   template: _post.txt
   extension: md

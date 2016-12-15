@@ -5,13 +5,178 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jun 2016 15:17:29 +0100</pubDate>
-    <lastBuildDate>Tue, 28 Jun 2016 15:17:29 +0100</lastBuildDate>
+    <pubDate>Thu, 15 Dec 2016 14:25:16 +0000</pubDate>
+    <lastBuildDate>Thu, 15 Dec 2016 14:25:16 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
+        <title>Moving away from Evernote</title>
+        <description>&lt;p&gt;Evernote has recently &lt;a href=&quot;http://arstechnica.com/tech-policy/2016/12/evernotes-new-privacy-policy-raises-eyebrows/&quot;&gt;updated its privacy policy&lt;/a&gt; to allow their staff to look at any content you create on their note taking product. They also allow what people are currently calling “machine learning” (Normally bias encoding ‘if-statements’ that bring all the investors to the yard. &lt;a href=&quot;http://idlewords.com/talks/deep_fried_data.htm&quot;&gt;The deep-fat fryer of the tech world&lt;/a&gt;), but you can opt-out of this if you want.&lt;/p&gt;
+
+&lt;p&gt;This bothers me for a few reasons.&lt;/p&gt;
+
+&lt;p&gt;Firstly, I like to make the assumption that any information I give to a 3rd party will end up being public one day. Sometimes this is ok, like on Twitter or this blog, but other times are more confusing.&lt;/p&gt;
+
+&lt;p&gt;I like to have a clear understanding of what a service is doing with my data, so that I don’t have to constantly evaluate each piece of information I create on each service.&lt;/p&gt;
+
+&lt;p&gt;I made my Facebook profile public for this reason: from that point on I didn’t need to worry about privacy, I just didn’t put anything up there that I wasn’t happy to be in the public domain.&lt;/p&gt;
+
+&lt;p&gt;I previously trusted (maybe wrongly) that Evernote would take care of my information. This move by them has made it clear to me that they see their business not as a note taking product rather as a platform that allows them to learn about how people write. This in turn allows them to build services using that data. Your content is the product for other services, the note taking app is just the way of generating it. This isn’t what I want from a platform, I want focus on note taking. The risk of my notes being seen by others is much higher now.&lt;/p&gt;
+
+&lt;p&gt;Second, and maybe more importantly, I know a lot of people who use Evernote to store very sensitive information. A lot of this is in the public sector research community who do an amazing job of talking to real people about how they interact with the state every day. The work they do to condense these stories in to an abstract understanding of how a well iterated service should start life is one of the main reasons we have such excellent public digital services in the UK.&lt;/p&gt;
+
+&lt;p&gt;Notes from the interviews, necessarily, contain very personal content. I hope that no one is writing real names next to these notes, but even so, I bet that a lot of people would be identifiable from the notes alone. Imagine the notes on people who have been interviewed for a devoice service. Or a health related service. This is sensitive stuff.&lt;/p&gt;
+
+&lt;p&gt;The idea that a US based, VC backed startup (who apparently won’t be motivated to maintain privacy) can read these notes without notifying the author worries me.  To be clear, I don’t make these notes myself, but as I’ve worked in the public sector a lot it’s easy to imagine that I would have access to them. If I used Evernote every day, I would have to remember that nothing I put in there is private.&lt;/p&gt;
+
+&lt;p&gt;Of course, Evernote does have an encryption feature, but I would have to remember to do this for each and every note I created.&lt;/p&gt;
+
+&lt;p&gt;So I decided that I needed to move to a system that allows me to write notes in a way that keeps the control and ownership of my data in my hands, not the hands of a company interested in making money out of it.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-setup&quot;&gt;My setup&lt;/h2&gt;
+
+&lt;p&gt;I evaluated a few things when moving away from Evernote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Privacy (obviously)&lt;/li&gt;
+  &lt;li&gt;Open standards that prevent lock in (so that I can move to different software in future)&lt;/li&gt;
+  &lt;li&gt;Online backups&lt;/li&gt;
+  &lt;li&gt;Nice authoring environment&lt;/li&gt;
+  &lt;li&gt;Ability to group notes in to folders&lt;/li&gt;
+  &lt;li&gt;Platform agnostic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I don’t really need much more than this, but I understand that Evernote does a lot more.&lt;/p&gt;
+
+&lt;p&gt;After a bit of looking around I settled on using &lt;a href=&quot;https://ulyssesapp.com/&quot;&gt;Ulysses&lt;/a&gt; for authoring. I like it because I can write Markdown and save them as text files on by file system, meaning that I can use other editors if I want.&lt;/p&gt;
+
+&lt;p&gt;I’ve coupled this with &lt;a href=&quot;https://www.boxcryptor.com/en&quot;&gt;Boxcryptor&lt;/a&gt; and Dropbox, so that all of my notes are backed up to Dropbox, but encrypted on the way. This means I can access my notes on my phone, but that they are encrypted so that no one else can read them. I’m trying to get iA Writer on my Android phone to write back to Boxcryptor, but I’ve not managed that yet. No matter, I don’t write on the phone anyway. If you use Apple devices then you can use the encrypted iCloud, but I think Apple can decrypt the content of iCloud folders if they want.&lt;/p&gt;
+
+&lt;p&gt;In the medium term I will copy &lt;a href=&quot;https://twitter.com/paul_furley&quot;&gt;paul_furley&lt;/a&gt; and set up my own &lt;a href=&quot;https://www.paulfurley.com/taking-back-my-data-move-from-dropbox-to-nextcloud/&quot;&gt;Dropbox replacement with Nextcloud&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’m 24 hours in to this setup, and this blog post is all I’ve written so far, so this might not really work in the longer term.&lt;/p&gt;
+
+&lt;h2 id=&quot;list-of-alternatives&quot;&gt;List of alternatives&lt;/h2&gt;
+&lt;p&gt;While talking about this, others have suggested other options. I’ve not evaluated these against my criteria above, so some of these might be as bad as Evernote. In general, you should think about who can access your data, and what they might be doing with it. Unless it’s encrypted properly, you should assume that the information will  be public one day (when the company is hacked, goes bust, pivots, or whatever).&lt;/p&gt;
+
+&lt;p&gt;Feel free to send me more of these and I will keep this list maintained.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ia.net/writer&quot;&gt;iA Writer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.devontechnologies.com/products/devonthink/overview.html&quot;&gt;DEVONthink&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://turtlapp.com/&quot;&gt;Turtl&lt;/a&gt; (optionally host your own server, encrypted by default)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.onenote.com/&quot;&gt;Microsoft OneNote&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.google.com/keep/&quot;&gt;Google Keep&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://luminantsoftware.com/iphone/audionote.html&quot;&gt;AudioNote&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bear-writer.com/&quot;&gt;Bear&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;migrating&quot;&gt;Migrating&lt;/h2&gt;
+&lt;p&gt;Evernote allows you to export your notes to a custom XML format called &lt;code&gt;ENEX&lt;/code&gt;. Lots of the software linked to above support importing from that format, or there are some other tools that allow converting it to plain text that should mostly work with a new system.&lt;/p&gt;
+
+&lt;p&gt;This is a good point to make the case for not using proprietary formats, as you’ll end up getting locked in to the software you’re using. If you keep your notes in text files on a file system, it’s very hard to get locked in.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
+        <link>/articles/2016/moving-away-from-evernote</link>
+        <guid isPermaLink="true">/articles/2016/moving-away-from-evernote</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Banking</title>
+        <description>&lt;p&gt;Of course what should actually happen is that a bank should put itself in a position where it can iterate it’s public facing offering based on research and testing. It shouldn’t listen to relatively well off white middle-class men like me.&lt;/p&gt;
+
+&lt;p&gt;That being said, it would be hard to do worse than the recent offering by ‘Smile’ (“The internet bank”), so I’ve written some mostly unevidenced anecdotes about what &lt;em&gt;I&lt;/em&gt; would like from a bank, in 2016:&lt;/p&gt;
+
+&lt;h3 id=&quot;emotion&quot;&gt;Emotion&lt;/h3&gt;
+
+&lt;p&gt;Banks see personal banking as a business interaction with little emotion. Their customers will often see banking as a very emotive interaction. The emotional reaction someone has to being overdrawn (either once, or ongoing) is in sharp contrast to the cold reaction the bank will have.&lt;/p&gt;
+
+&lt;p&gt;This is understandable, but banks should anticipate that their customers might be in a very emotional state when interacting with them. This should be understood at the core of banks, by being baked in to their design principles.&lt;/p&gt;
+
+&lt;p&gt;Banks have many ‘levers’ for helping people, from budgeting advice and tools to loans. I don’t know enough about what might help in a given situation, but if a bank used it’s own data wisely then I expect they could start testing interventions against pattens of spending that would genuinely make banking feel helpful, not scary. As a start, they could try to calculate available funds, taking direct debits and regular payments in to account. Some banks do this already.&lt;/p&gt;
+
+&lt;h3 id=&quot;information-access&quot;&gt;Information access&lt;/h3&gt;
+
+&lt;p&gt;Banking is one of the few areas where the public take security seriously. That is, I expect that more people care about their bank log in than, for example, their email or PayPal log in, even though it’s possible that the impact either being attacked could be the same.&lt;/p&gt;
+
+&lt;p&gt;This fear mixed with often bizarre log in and authentication rituals makes social engineering attacks easy, as customers are used to giving up a lot of personal information to assert their identity.&lt;/p&gt;
+
+&lt;p&gt;At the same time, people are often encouraged to share a “statement of transactions” for the last 3 to 6 months. This happens as a crude way to assess the wealth of potential tenants, mortgage customers and borrowers. The information contained in these statements could be highly sensitive, however they are often send over email to small offices, as a PDF downloaded from a web site.&lt;/p&gt;
+
+&lt;p&gt;Banks should rethink the pattens of authentication and authorisation in a way thank puts control firmly and clearly in the hands of the customer. An excellent example of this is the DVLA ‘single use access token’ patten that replaces the paper counterpart, used for checking endorsements when, for example, hiring a car.&lt;/p&gt;
+
+&lt;p&gt;Smart authorisation could help 3rd parties too, by answering the actual thing they want to know when asking for bank statements. For example, “Has this person been able to make regular payments over £100 for the last year?”, “How many times has this person been overdrawn in the last 6 months?”. With good information sharing interfaces, banking customers would be able to share this information, verified by the bank themselves, and without exposing all of their transactions.&lt;/p&gt;
+
+&lt;h3 id=&quot;rule-of-separation&quot;&gt;Rule of Separation&lt;/h3&gt;
+
+&lt;p&gt;Interfaces should be different from the business logic of banking (making ad receiving payments, storing money, overdrafts, ATM access, etc). If authentication and authorisation above are done well, the full functionality of the bank account should be controllable by 3rd parties.&lt;/p&gt;
+
+&lt;p&gt;We see early examples of this in read-only interfaces at the moment, but we should move away from banks tightly coupling their interfaces to their accounts.&lt;/p&gt;
+
+&lt;p&gt;This would allow for budgeting tools to do things like automatically sort income in to different ‘pots’ of money for savings, bills, etc (why we currently need different “accounts” to do this? Can bank accounts have folders and tags please?), or for whole new open source interfaces to be developed.&lt;/p&gt;
+
+&lt;p&gt;This could allow all sorts of interesting new ideas, like tools for helping more than one person manage an account. For example bank accounts could be “owned” by a shared house (set up by the estate agent) for group bill payments, or ad-hoc group buying Co-Ops that need capital and accountability from all the members.&lt;/p&gt;
+
+&lt;h3 id=&quot;movable-account-numbers&quot;&gt;Movable account numbers&lt;/h3&gt;
+
+&lt;p&gt;One of the things that makes changing bank accounts hard is having to change bank “account numbers” and “sort codes” everywhere.&lt;/p&gt;
+
+&lt;p&gt;Banks should charge for a fixed identification number that acts as a routing code to the deposit account desired, in a similar way that DNS resolves domains to servers.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 20 Sep 2016 00:00:00 +0100</pubDate>
+        <link>/articles/2016/banking</link>
+        <guid isPermaLink="true">/articles/2016/banking</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>A brief history of schema.org jobPosting standard in Government</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;This post is here&lt;/span&gt;  as something I can point to when talking about the work I was partly involved with around getting higher quality job adverts and labour market information.&lt;/p&gt;
+
+&lt;p&gt;In 2015 &lt;a href=&quot;https://www.citizensadvice.org.uk/about-us/policy/policy-research-topics/work-policy-research-surveys-and-consultation-responses/work-surveys-consultation-responses/how-we-can-fix-bad-job-ads/&quot;&gt;Citizens Advice laid out the case for better job adverts&lt;/a&gt;, saying:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[…] only 12% of job adverts contained the information recommended by the Advertising Standards Authority (ASA).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We’re talking pretty basic details here. 40% weren’t clear if the jobs were full or part time, a third didn’t mention how much you could expect to be paid and another 40% didn’t tell you whether the job was permanent or temporary.&lt;br /&gt;
+&lt;cite&gt;&lt;a href=&quot;https://blogs.citizensadvice.org.uk/blog/job-adverts-how-getting-the-small-details-right-can-lead-to-big-successes/&quot;&gt;Citizens Advice&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This shows that job publishers can improve the process of finding a job by adding basic information to the adverts. By making that improved information easier for computers to read we can also make that information easier to search using online job boards.&lt;/p&gt;
+
+&lt;p&gt;For example, if the location of a job is something that can be put on Google Maps then it’s easier to look for jobs that are close to you.&lt;/p&gt;
+
+&lt;p&gt;Machine readable job adverts make generating reports on the labour market easier as well, allowing government and business to cater for the changing supply and demand of skills and workers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@charlesrt/setting-an-open-standard-for-job-postings-9e548f8fc9bd#.ng6auvufw&quot;&gt;Charles RT wrote a nice post explaining this in full&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When I was at DWP we came up with two ways of exploring this space.&lt;/p&gt;
+
+&lt;p&gt;We started by &lt;a href=&quot;https://digitaldwp.blog.gov.uk/2016/02/19/learning-through-prototyping-tools-for-universal-credit-claimants/&quot;&gt;Create prototype tools that pretend high quality job data exists&lt;/a&gt;, in order to test their usefulness with jobseekers. We learnt a lot about how job advert and labour market data could be improved by doing this.&lt;/p&gt;
+
+&lt;p&gt;Then we suggested the UK Government adopt a &lt;a href=&quot;https://governmenttechnology.blog.gov.uk/2016/05/18/making-job-adverts-more-open/&quot;&gt;well known standard for job adverts&lt;/a&gt; for all their jobs, in the hopes other will follow suit.&lt;/p&gt;
+
+&lt;p&gt;Outside of Government, &lt;a href=&quot;http://better-job-adverts.herokuapp.com/&quot;&gt;Doteveryone have created a tool for checking the quality of job adverts&lt;/a&gt;, including the use of scheme.org jobPosting, gendered wording, hours, location and readability.&lt;/p&gt;
+
+&lt;p&gt;Anyone wanting to improve job adverts that they publish could start by running their adverts through this checker to see if there are common problems with them.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.memespring.co.uk/2016/05/22/policy-options-for-getting-wider-adoption-of-jobposting-standard/&quot;&gt;Richard has also written a list of ideas&lt;/a&gt; for getting wider adoption of jobPosting.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 Jul 2016 00:00:00 +0100</pubDate>
+        <link>/articles/2016/a-brief-history-of-job-posting-standard-in-government</link>
+        <guid isPermaLink="true">/articles/2016/a-brief-history-of-job-posting-standard-in-government</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Unbiasing</title>
-        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;I was invited to speak&lt;/span&gt;  at &lt;a href=&quot;https://www.facebook.com/events/1001444476668731/&quot;&gt;an event at nwspk house&lt;/a&gt; the other day about the London Civic Tech community’s reaction to the ‘Brexit’ result.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;I was invited to speak&lt;/span&gt;  at &lt;a href=&quot;https://www.facebook.com/events/1001444476668731/&quot;&gt;an event at Newspeak House&lt;/a&gt; the other day about the London Civic Tech community’s reaction to the ‘Brexit’ result.&lt;/p&gt;
 
 &lt;p&gt;I wanted to talk about something that I’ve been mulling over for a while now called ‘unbiasing’:&lt;br /&gt;
 &lt;!--more--&gt;&lt;/p&gt;
@@ -26,7 +191,7 @@
   &lt;p&gt;Calling angry technologists. We think we know something other people don’t. Let’s do a bit of a post-mortem of the referendum, and talk about how we might be able to apply our skills to make politics better so we can start feeling proud of our country again.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;I wanted to challenge the attitude that “We think we know something other people don’t” or that “our sills” automatically give us the ability to “make politics better”.&lt;/p&gt;
+&lt;p&gt;I wanted to challenge the attitude that “We think we know something other people don’t” or that “our skills” automatically give us the ability to “make politics better”.&lt;/p&gt;
 
 &lt;p&gt;The ability to write code doesn’t enable you to “fix” society, it enables you to write code.&lt;/p&gt;
 
