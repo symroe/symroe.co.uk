@@ -1,30 +1,217 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Sym Roe</title>
+    <description></description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 26 Jan 2017 10:44:55 +0000</pubDate>
+    <lastBuildDate>Thu, 26 Jan 2017 10:44:55 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Securing ourselves</title>
+        <description>&lt;p&gt;You know you should do it – you’ve seen people Tweeting about it and got emails from the IT people at work.&lt;/p&gt;
+
+&lt;p&gt;But there’s always other things to do and you’ve never quite got around to it. Turning on “Two Factor Auth” in Google isn’t something I want to do. Getting a password manager sounds like it’ll just be more work. It’s not &lt;em&gt;that&lt;/em&gt; big a deal anyway, is it?&lt;/p&gt;
+
+&lt;p&gt;If this is you, then I would like to invite you to a new experiment that I’ve been thinking about for a while.&lt;/p&gt;
+
+&lt;p&gt;I want to host a public Google Hangout for an hour a week for the next few weeks where we get together and learn how to improve our personal security.&lt;/p&gt;
+
+&lt;p&gt;Everything from how we manage passwords to turning on “MFA” on the web services we use. We can even talk about PGP and encrypted communication if you like, but let’s start simple.&lt;/p&gt;
+
+&lt;p&gt;The idea is that anyone can drop in for 5 minutes, but that they use that time as motivation to get around to making themselves (or at least their online identity) more secure.&lt;/p&gt;
+
+&lt;p&gt;What do you think? Want to give it a go?&lt;/p&gt;
+
+&lt;p&gt;If so, join me from 19.30 to 20.30 UK time on this link:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hangouts.google.com/hangouts/_/symroe.co.uk/secureyourself&quot;&gt;https://hangouts.google.com/hangouts/_/symroe.co.uk/secureyourself&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
+        <link>/articles/2017/secure-yourself</link>
+        <guid isPermaLink="true">/articles/2017/secure-yourself</guid>
+        
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Moving away from Evernote</title>
+        <description>&lt;p&gt;Evernote has recently &lt;a href=&quot;http://arstechnica.com/tech-policy/2016/12/evernotes-new-privacy-policy-raises-eyebrows/&quot;&gt;updated its privacy policy&lt;/a&gt; to allow their staff to look at any content you create on their note taking product. They also allow what people are currently calling “machine learning” (Normally bias encoding ‘if-statements’ that bring all the investors to the yard. &lt;a href=&quot;http://idlewords.com/talks/deep_fried_data.htm&quot;&gt;The deep-fat fryer of the tech world&lt;/a&gt;), but you can opt-out of this if you want.&lt;/p&gt;
+
+&lt;p&gt;This bothers me for a few reasons.&lt;/p&gt;
+
+&lt;p&gt;Firstly, I like to make the assumption that any information I give to a 3rd party will end up being public one day. Sometimes this is ok, like on Twitter or this blog, but other times are more confusing.&lt;/p&gt;
+
+&lt;p&gt;I like to have a clear understanding of what a service is doing with my data, so that I don’t have to constantly evaluate each piece of information I create on each service.&lt;/p&gt;
+
+&lt;p&gt;I made my Facebook profile public for this reason: from that point on I didn’t need to worry about privacy, I just didn’t put anything up there that I wasn’t happy to be in the public domain.&lt;/p&gt;
+
+&lt;p&gt;I previously trusted (maybe wrongly) that Evernote would take care of my information. This move by them has made it clear to me that they see their business not as a note taking product rather as a platform that allows them to learn about how people write. This in turn allows them to build services using that data. Your content is the product for other services, the note taking app is just the way of generating it. This isn’t what I want from a platform, I want focus on note taking. The risk of my notes being seen by others is much higher now.&lt;/p&gt;
+
+&lt;p&gt;Second, and maybe more importantly, I know a lot of people who use Evernote to store very sensitive information. A lot of this is in the public sector research community who do an amazing job of talking to real people about how they interact with the state every day. The work they do to condense these stories in to an abstract understanding of how a well iterated service should start life is one of the main reasons we have such excellent public digital services in the UK.&lt;/p&gt;
+
+&lt;p&gt;Notes from the interviews, necessarily, contain very personal content. I hope that no one is writing real names next to these notes, but even so, I bet that a lot of people would be identifiable from the notes alone. Imagine the notes on people who have been interviewed for a devoice service. Or a health related service. This is sensitive stuff.&lt;/p&gt;
+
+&lt;p&gt;The idea that a US based, VC backed startup (who apparently won’t be motivated to maintain privacy) can read these notes without notifying the author worries me.  To be clear, I don’t make these notes myself, but as I’ve worked in the public sector a lot it’s easy to imagine that I would have access to them. If I used Evernote every day, I would have to remember that nothing I put in there is private.&lt;/p&gt;
+
+&lt;p&gt;Of course, Evernote does have an encryption feature, but I would have to remember to do this for each and every note I created.&lt;/p&gt;
+
+&lt;p&gt;So I decided that I needed to move to a system that allows me to write notes in a way that keeps the control and ownership of my data in my hands, not the hands of a company interested in making money out of it.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-setup&quot;&gt;My setup&lt;/h2&gt;
+
+&lt;p&gt;I evaluated a few things when moving away from Evernote:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Privacy (obviously)&lt;/li&gt;
+  &lt;li&gt;Open standards that prevent lock in (so that I can move to different software in future)&lt;/li&gt;
+  &lt;li&gt;Online backups&lt;/li&gt;
+  &lt;li&gt;Nice authoring environment&lt;/li&gt;
+  &lt;li&gt;Ability to group notes in to folders&lt;/li&gt;
+  &lt;li&gt;Platform agnostic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I don’t really need much more than this, but I understand that Evernote does a lot more.&lt;/p&gt;
+
+&lt;p&gt;After a bit of looking around I settled on using &lt;a href=&quot;https://ulyssesapp.com/&quot;&gt;Ulysses&lt;/a&gt; for authoring. I like it because I can write Markdown and save them as text files on by file system, meaning that I can use other editors if I want.&lt;/p&gt;
+
+&lt;p&gt;I’ve coupled this with &lt;a href=&quot;https://www.boxcryptor.com/en&quot;&gt;Boxcryptor&lt;/a&gt; and Dropbox, so that all of my notes are backed up to Dropbox, but encrypted on the way. This means I can access my notes on my phone, but that they are encrypted so that no one else can read them. I’m trying to get iA Writer on my Android phone to write back to Boxcryptor, but I’ve not managed that yet. No matter, I don’t write on the phone anyway. If you use Apple devices then you can use the encrypted iCloud, but I think Apple can decrypt the content of iCloud folders if they want.&lt;/p&gt;
+
+&lt;p&gt;In the medium term I will copy &lt;a href=&quot;https://twitter.com/paul_furley&quot;&gt;paul_furley&lt;/a&gt; and set up my own &lt;a href=&quot;https://www.paulfurley.com/taking-back-my-data-move-from-dropbox-to-nextcloud/&quot;&gt;Dropbox replacement with Nextcloud&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’m 24 hours in to this setup, and this blog post is all I’ve written so far, so this might not really work in the longer term.&lt;/p&gt;
+
+&lt;h2 id=&quot;list-of-alternatives&quot;&gt;List of alternatives&lt;/h2&gt;
+&lt;p&gt;While talking about this, others have suggested other options. I’ve not evaluated these against my criteria above, so some of these might be as bad as Evernote. In general, you should think about who can access your data, and what they might be doing with it. Unless it’s encrypted properly, you should assume that the information will  be public one day (when the company is hacked, goes bust, pivots, or whatever).&lt;/p&gt;
+
+&lt;p&gt;Feel free to send me more of these and I will keep this list maintained.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ia.net/writer&quot;&gt;iA Writer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.devontechnologies.com/products/devonthink/overview.html&quot;&gt;DEVONthink&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://turtlapp.com/&quot;&gt;Turtl&lt;/a&gt; (optionally host your own server, encrypted by default)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.onenote.com/&quot;&gt;Microsoft OneNote&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.google.com/keep/&quot;&gt;Google Keep&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://luminantsoftware.com/iphone/audionote.html&quot;&gt;AudioNote&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.bear-writer.com/&quot;&gt;Bear&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;migrating&quot;&gt;Migrating&lt;/h2&gt;
+&lt;p&gt;Evernote allows you to export your notes to a custom XML format called &lt;code&gt;ENEX&lt;/code&gt;. Lots of the software linked to above support importing from that format, or there are some other tools that allow converting it to plain text that should mostly work with a new system.&lt;/p&gt;
+
+&lt;p&gt;This is a good point to make the case for not using proprietary formats, as you’ll end up getting locked in to the software you’re using. If you keep your notes in text files on a file system, it’s very hard to get locked in.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
+        <link>/articles/2016/moving-away-from-evernote</link>
+        <guid isPermaLink="true">/articles/2016/moving-away-from-evernote</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>A brief history of schema.org jobPosting standard in Government</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;This post is here&lt;/span&gt;  as something I can point to when talking about the work I was partly involved with around getting higher quality job adverts and labour market information.&lt;/p&gt;
+
+&lt;p&gt;In 2015 &lt;a href=&quot;https://www.citizensadvice.org.uk/about-us/policy/policy-research-topics/work-policy-research-surveys-and-consultation-responses/work-surveys-consultation-responses/how-we-can-fix-bad-job-ads/&quot;&gt;Citizens Advice laid out the case for better job adverts&lt;/a&gt;, saying:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;[…] only 12% of job adverts contained the information recommended by the Advertising Standards Authority (ASA).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We’re talking pretty basic details here. 40% weren’t clear if the jobs were full or part time, a third didn’t mention how much you could expect to be paid and another 40% didn’t tell you whether the job was permanent or temporary.&lt;br /&gt;
+&lt;cite&gt;&lt;a href=&quot;https://blogs.citizensadvice.org.uk/blog/job-adverts-how-getting-the-small-details-right-can-lead-to-big-successes/&quot;&gt;Citizens Advice&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This shows that job publishers can improve the process of finding a job by adding basic information to the adverts. By making that improved information easier for computers to read we can also make that information easier to search using online job boards.&lt;/p&gt;
+
+&lt;p&gt;For example, if the location of a job is something that can be put on Google Maps then it’s easier to look for jobs that are close to you.&lt;/p&gt;
+
+&lt;p&gt;Machine readable job adverts make generating reports on the labour market easier as well, allowing government and business to cater for the changing supply and demand of skills and workers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@charlesrt/setting-an-open-standard-for-job-postings-9e548f8fc9bd#.ng6auvufw&quot;&gt;Charles RT wrote a nice post explaining this in full&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When I was at DWP we came up with two ways of exploring this space.&lt;/p&gt;
+
+&lt;p&gt;We started by &lt;a href=&quot;https://digitaldwp.blog.gov.uk/2016/02/19/learning-through-prototyping-tools-for-universal-credit-claimants/&quot;&gt;Create prototype tools that pretend high quality job data exists&lt;/a&gt;, in order to test their usefulness with jobseekers. We learnt a lot about how job advert and labour market data could be improved by doing this.&lt;/p&gt;
+
+&lt;p&gt;Then we suggested the UK Government adopt a &lt;a href=&quot;https://governmenttechnology.blog.gov.uk/2016/05/18/making-job-adverts-more-open/&quot;&gt;well known standard for job adverts&lt;/a&gt; for all their jobs, in the hopes other will follow suit.&lt;/p&gt;
+
+&lt;p&gt;Outside of Government, &lt;a href=&quot;http://better-job-adverts.herokuapp.com/&quot;&gt;Doteveryone have created a tool for checking the quality of job adverts&lt;/a&gt;, including the use of scheme.org jobPosting, gendered wording, hours, location and readability.&lt;/p&gt;
+
+&lt;p&gt;Anyone wanting to improve job adverts that they publish could start by running their adverts through this checker to see if there are common problems with them.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.memespring.co.uk/2016/05/22/policy-options-for-getting-wider-adoption-of-jobposting-standard/&quot;&gt;Richard has also written a list of ideas&lt;/a&gt; for getting wider adoption of jobPosting.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 Jul 2016 00:00:00 +0100</pubDate>
+        <link>/articles/2016/a-brief-history-of-job-posting-standard-in-government</link>
+        <guid isPermaLink="true">/articles/2016/a-brief-history-of-job-posting-standard-in-government</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Unbiasing</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;I was invited to speak&lt;/span&gt;  at &lt;a href=&quot;https://www.facebook.com/events/1001444476668731/&quot;&gt;an event at Newspeak House&lt;/a&gt; the other day about the London Civic Tech community’s reaction to the ‘Brexit’ result.&lt;/p&gt;
+
+&lt;p&gt;I wanted to talk about something that I’ve been mulling over for a while now called ‘unbiasing’:&lt;br /&gt;
+&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Making the unconscious conscious will help you make more objective decisions, facilitate inclusive interactions, and create opportunities. Begin unbiasing with education, accountability, measurement, and more. &lt;cite&gt;&lt;a href=&quot;https://rework.withgoogle.com/subjects/unbiasing/&quot;&gt;withgoogle.com&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This was partly promoted by this (intentionally provocative, I expect) paragraph in the event description:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Calling angry technologists. We think we know something other people don’t. Let’s do a bit of a post-mortem of the referendum, and talk about how we might be able to apply our skills to make politics better so we can start feeling proud of our country again.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I wanted to challenge the attitude that “We think we know something other people don’t” or that “our skills” automatically give us the ability to “make politics better”.&lt;/p&gt;
+
+&lt;p&gt;The ability to write code doesn’t enable you to “fix” society, it enables you to write code.&lt;/p&gt;
+
+&lt;p&gt;Code for code’s sake is unlikely to fix anything, so it’s worth starting with an idea, and then validating that idea before writing any code (of course, this applies to non-code based projects too).&lt;/p&gt;
+
+&lt;p&gt;When validating ideas, it’s important to recognise that your bias will change the way you look at the world. Because of this, you should try to do anything you can to ‘unbias’ yourself (or, perhaps, learn others’ bias).&lt;/p&gt;
+
+&lt;p&gt;There is a high chance that your ability to write code is related to your background, wealth and free time, not your intelligence or social/political outlook.&lt;/p&gt;
+
+&lt;p&gt;In the talk I read out a list that I’ve written for myself to try and internalise as much as I can. It’s not perfect and I wont always remember to apply it.&lt;/p&gt;
+
+&lt;p&gt;A few people asked me to publish it, so here, in no particular order, is what I wrote.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Make the assumption that you don’t have a representative range of views on any topic at all, especially the ones you’re sure you have a representative range of of views on.&lt;/p&gt;
+
+&lt;p&gt;Resist binary options, things are always more complex. Try adding a 3rd option wherever possible.&lt;/p&gt;
+
+&lt;p&gt;Questions that can be answered objectively don’t consider how people relate themselves to the question, or the answer. &lt;label for=&quot;objectively&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;objectively&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;e.g. “The sky is blue” is not as simple a statement as you may think. People’s sense of ‘self’ varies from culture to culture – I could go on. &lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Try to write down your assumptions as often as you can. If you don’t think you have any, question why and write down ones you think are far too obvious.&lt;/p&gt;
+
+&lt;p&gt;When in meetings or public gatherings, note down the mix of gender, age, and other demographic that you can guess at from looking at the people there. You won’t get everything correct, but it will let you reflect on trends over time.&lt;/p&gt;
+
+&lt;p&gt;At these same events, try to answer the question “who is unlikely to be here because of the time, location or make up of this event”. If you don’t know, try to find out.&lt;/p&gt;
+
+&lt;p&gt;When considering numbers of people, try to mentally frame the number in absolute terms, for example work out the percentage of the population that number reflects.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I would really like to hear feedback on these and particularly improvements or new points that I can try to absorb in to my thinking.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Jun 2016 00:00:00 +0100</pubDate>
+        <link>/articles/2016/unbiasing</link>
+        <guid isPermaLink="true">/articles/2016/unbiasing</guid>
+        
+        <category>unbiasing</category>
+        
+        
+      </item>
+    
   </channel>
 </rss>
