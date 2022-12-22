@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "et-book";
+  src: url("/styles/fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+  src: url("/styles/fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/et-book/et-book-roman-old-style-figures/etbookot-roman-webfont.woff") format("woff"), url("/styles/fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("/styles/fonts/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "et-book";
+  src: url("/styles/fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+  src: url("/styles/fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("/styles/fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("/styles/fonts/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "et-book";
+  src: url("/styles/fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+  src: url("/styles/fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("/styles/fonts/et-book/et-book-bold-line-figures/etbookot-bold-webfont.woff") format("woff"), url("/styles/fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("/styles/fonts/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+.stack > * + * {
+  margin-top: 3.05176rem; }
+
+* {
+  margin-bottom: 0; }
+
+.stack-smaller > * + *, ul > * + *, ol > * + * {
+  margin-top: 1.25rem; }
+
+.stack > h2 + p {
+  margin-top: 1rem; }
+
+.stack p + p {
+  margin-top: 1.25rem !important; }
+
+ul li, ol li {
+  margin-left: 1.95312rem; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  line-height: 1.5;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  /*font-size-adjust: 1.5;*/
+  font-variant-ligatures: common-ligatures;
+  color: #32302D;
+  background-color: #FEFCF9;
+  margin: 0;
+  padding: 0;
+  font-family: "et-book", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; }
+
+p code {
+  padding: 0 0.5rem; }
+
+code {
+  background-color: #F9F3E9; }
+
+code, pre {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-family: Consolas, Monaco,'Andale Mono','Ubuntu Mono',monospace;
+  color: black; }
+
+pre code {
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 3px 4px 0 1px #000;
+  padding-left: 0.5rem;
+  margin: 0;
+  display: block;
+  overflow: auto;
+  background-color: #F9F3E9; }
+
+hr {
+  border: none;
+  border-bottom: 1px solid #333;
+  max-width: calc(70ch * 1.2);
+  width: 90%;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 0.3em;
+  position: relative;
+  top: -1rem; }
+
+hr:after {
+  background: #FEFCF9;
+  content: '⁂';
+  padding: 0 1em;
+  position: relative;
+  font-size: 1.25rem;
+  bottom: 0.4em; }
+
+main > *:not(section):not(hr):not(article),
+main > article > *:not(section):not(hr),
+main > article > section > *,
+header > * {
+  max-width: 55rem;
+  margin: auto;
+  padding-left: calc(15px + 1.5vw);
+  padding-right: calc(15px + 1.5vw); }
+
+main > section, main > article > section {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem; }
+
+aside.site-note {
+  float: right;
+  width: 300px; }
+
+blockquote {
+  font-size: 1.2em;
+  font-style: italic;
+  border-left: 0.1em solid #32302D;
+  width: 90%; }
+
+.invert {
+  background-color: #32302D;
+  color: #FEFCF9; }
+
+@media (prefers-color-scheme: dark) {
+  .invert {
+    color: #32302D;
+    background-color: #FEFCF9; }
+  body {
+    background-color: #32302D;
+    color: #FEFCF9; }
+  a, a:visited, a:hover {
+    color: #FEFCF9; }
+  hr {
+    border-color: #FEFCF9; }
+  hr:after {
+    background-color: #32302D;
+    color: #FEFCF9; }
+  code {
+    background-color: #4A4844;
+    color: #FEFCF9; }
+  pre code {
+    background-color: #F9F3E9;
+    color: #32302D;
+    border-color: #8C8B8A;
+    box-shadow: 3px 4px 0 1px #8C8B8A; }
+  blockquote {
+    border-color: #FEFCF9; } }

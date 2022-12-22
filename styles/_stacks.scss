@@ -1,0 +1,32 @@
+%stack > * + * {
+  margin-top: $s6;
+}
+
+* {
+  margin-bottom: 0;
+}
+
+%stack-smaller > * + * {
+  margin-top: $s2;
+}
+
+.stack { @extend %stack;}
+.stack-smaller { @extend %stack-smaller }
+
+
+.stack > h2 + p {
+    margin-top:$s1;
+}
+
+
+.stack p + p {
+  margin-top: $s2 !important;
+}
+
+ul, ol {
+  @extend %stack-smaller;
+
+  & li {
+    margin-left: $s4;
+  }
+}

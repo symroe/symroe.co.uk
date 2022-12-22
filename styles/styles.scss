@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@import 'variables';
+@import 'stacks';
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: $lineHeight;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  /*font-size-adjust: 1.5;*/
+  font-variant-ligatures: common-ligatures;
+  color: $OffBlack;
+  background-color: $OffWhite;
+  margin: 0;
+  padding:0;
+  font-family: "et-book", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+p code {
+  padding: 0 0.5rem;
+}
+
+code { background-color: $LightCream;}
+code, pre {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-family: Consolas, Monaco,'Andale Mono','Ubuntu Mono',monospace;
+  color:black;
+}
+pre code {
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 3px 4px 0 1px #000;
+  padding-left: 0.5rem;
+  margin: 0;
+  display: block;
+  overflow:auto;
+  background-color: $LightCream;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #333;
+  max-width: calc(#{$measure} * 1.2);
+  width:90%;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 0.3em;
+  position: relative;
+  top: -$s1;
+}
+
+hr:after {
+  background: #FEFCF9;
+  content: '⁂';
+  padding: 0 1em;
+  position: relative;
+  font-size:$s2;
+  bottom: 0.4em;
+}
+
+main > *:not(section,hr, article),
+  main > article  > *:not(section,hr),
+  main > article >  section > *,
+  header > *
+{
+  max-width: 55rem;
+  margin:auto;
+  padding-left: calc(15px + 1.5vw);
+  padding-right: calc(15px + 1.5vw);
+
+}
+
+main > section, main > article > section {
+  padding-top: $s2;
+  padding-bottom: $s2;
+}
+
+
+
+aside.site-note {
+  float:right;
+  width:300px;
+}
+
+blockquote {
+  font-size: 1.2em;
+  font-style: italic;
+  border-left: 0.1em  solid $OffBlack;
+  width: 90%;
+}
+
+@import 'invert';
