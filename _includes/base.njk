@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ site.basedir }}/styles/styles.css" />
+    <title>{{ title }} {% if not home %}({{ site.name }}){% endif %}</title>
+</head>
+<body>
+<div id="page" class="stack">
+    <header>
+        <h1>Sym Roe</h1>
+        <nav>
+            <ul>
+{#                <li><a href="{{ '/' | url }}">Home</a></li>#}
+{#                <li><a href="{{ '/articles/' | url }}">Articles</a></li>#}
+{#                <li><a href="{{ '/contact/' | url }}">Contact</a></li>#}
+            </ul>
+        </nav>
+    </header>
+    <main class="stack">
+        {{ content | safe }}
+    </main>
+</div>
+</body>
+</html>

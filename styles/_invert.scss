@@ -1,0 +1,40 @@
+
+.invert {
+  background-color: $OffBlack;
+  color: $OffWhite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .invert {
+    color: $OffBlack;
+    background-color: $OffWhite;
+  }
+  body {
+    background-color: $OffBlack;
+    color: $OffWhite;
+  }
+
+  a, a:visited, a:hover {
+    color: $OffWhite;
+  }
+
+  hr {
+    border-color: $OffWhite;
+  }
+  hr:after {
+    background-color: $OffBlack;
+    color: $OffWhite;
+  }
+
+  code { background-color: #4A4844; color: $OffWhite}
+  pre code {
+    background-color: $LightCream;
+    color: $OffBlack;
+    border-color: #8C8B8A;
+    box-shadow: 3px 4px 0 1px #8C8B8A;
+  }
+
+  blockquote {
+    border-color: $OffWhite;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "symroe.co.uk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "npx node-sass --watch styles/styles.scss -o styles",
+    "build:sass": "npx node-sass styles/styles.scss -o styles",
+    "watch:eleventy": "npm run build:sass && npx eleventy --serve",
+    "build:eleventy": "npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//symroe/symroe.co.uk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "node-sass": "^8.0.0",
+    "sass": "^1.49.11"
+  }
+}
