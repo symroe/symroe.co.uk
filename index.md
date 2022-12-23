@@ -1,5 +1,5 @@
 ---
-title: Sym Roe
+title: About
 layout: base.njk
 ---
 
